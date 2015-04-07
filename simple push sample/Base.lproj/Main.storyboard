@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="deq-ie-8VG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Push notifications-->
+        <scene sceneID="6ps-33-qzJ">
+            <objects>
+                <tableViewController storyboardIdentifier="Push notifications" title="Push notifications" id="W8m-8v-USV" customClass="PushTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ayW-1e-Hps">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="wXB-At-TfU">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="23" id="YvD-k2-FmW">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YvD-k2-FmW" id="pcE-Dx-1Sv">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Console Log:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxR-kd-7yn">
+                                                    <rect key="frame" x="8" y="5" width="100" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="IMi-vc-pcF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TxR-kd-7yn" firstAttribute="leading" secondItem="pcE-Dx-1Sv" secondAttribute="leadingMargin" constant="60" id="Jk6-9x-eaF"/>
+                                                <constraint firstItem="TxR-kd-7yn" firstAttribute="top" secondItem="pcE-Dx-1Sv" secondAttribute="topMargin" constant="-3" id="fnQ-99-ik2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="372" id="nrU-WN-ElX">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nrU-WN-ElX" id="MTv-mw-TTp">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCD-8O-zVF">
+                                                    <rect key="frame" x="131" y="8" width="461" height="236"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.53562973484848486" green="0.53562973484848486" blue="0.53562973484848486" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cCD-8O-zVF" firstAttribute="top" secondItem="MTv-mw-TTp" secondAttribute="topMargin" id="0wE-IB-qyf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cCD-8O-zVF" secondAttribute="bottom" id="JL8-oB-BqG"/>
+                                                <constraint firstItem="cCD-8O-zVF" firstAttribute="trailing" secondItem="MTv-mw-TTp" secondAttribute="trailingMargin" id="XsA-7F-ujF"/>
+                                                <constraint firstItem="cCD-8O-zVF" firstAttribute="leading" secondItem="MTv-mw-TTp" secondAttribute="leadingMargin" constant="60" id="hr2-SV-stq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="67" id="iKR-y3-LKs">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iKR-y3-LKs" id="ZXw-a7-lHB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-al-4j0">
+                                                    <rect key="frame" x="75" y="19" width="450" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="BeB-8m-zPw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                                    <state key="normal" title="Generate Push with Server Code" backgroundImage="button_green_normal.png">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" title="MAAAAN"/>
+                                                    <state key="highlighted" backgroundImage="button_green_pressed.png"/>
+                                                    <connections>
+                                                        <action selector="clickGenerate:" destination="W8m-8v-USV" eventType="touchUpInside" id="KRf-b5-Xsv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gtU-al-4j0" secondAttribute="trailing" id="4Jp-B1-f6F"/>
+                                                <constraint firstItem="gtU-al-4j0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZXw-a7-lHB" secondAttribute="leadingMargin" constant="60" id="EtH-Xb-c13"/>
+                                                <constraint firstItem="gtU-al-4j0" firstAttribute="top" secondItem="ZXw-a7-lHB" secondAttribute="topMargin" constant="11" id="fNf-Nj-v7X"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="W8m-8v-USV" id="CS8-98-YU3"/>
+                            <outlet property="delegate" destination="W8m-8v-USV" id="vnO-NF-Due"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Push notifications" id="hMf-Rf-wV6"/>
+                    <connections>
+                        <outlet property="generateButton" destination="gtU-al-4j0" id="Iew-jQ-wjm"/>
+                        <outlet property="textView" destination="cCD-8O-zVF" id="98X-5g-JiB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcp-O4-qTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="-606"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cfV-8b-ntR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="deq-ie-8VG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ta8-xc-42i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W8m-8v-USV" kind="relationship" relationship="rootViewController" id="uZM-3o-xiQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6O-ci-ATl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="-557"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_green_normal.png" width="12" height="12"/>
+        <image name="button_green_pressed.png" width="12" height="12"/>
+    </resources>
+</document>
