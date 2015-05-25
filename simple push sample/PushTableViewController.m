@@ -10,6 +10,8 @@
 #import <GamedoniaSDK/Gamedonia.h>
 #include <GamedoniaSDK/OpenUDID.h>
 
+#include "TargetConditionals.h"
+
 @interface PushTableViewController ()
 
 @end
@@ -53,8 +55,8 @@
                 NSLog(@"No active session token detected.");
             }
         }];
-            
-
+        
+        
     }
     else {
         
@@ -99,10 +101,10 @@
         }
         else {
             
-           NSLog(@"Get me call failed.");
+            NSLog(@"Get me call failed.");
         }
     }];
-
+    
 }
 
 - (void) didReceiveMemoryWarning {
@@ -115,30 +117,34 @@
     
     NSDictionary *userInfo = [NSDictionary alloc];
     userInfo = notification.userInfo;
-    NSDictionary *myAPS = [userInfo valueForKey:@"aps"];
-    NSString *myAlert = [myAPS valueForKey:@"alert"];
     
-    [self printText:myAlert];
-    
-
+    NSString *msg = [[userInfo valueForKey:@"aps"] valueForKey:@"alert"];
+    [self printText:msg];
 }
+
+
 
 - (IBAction) clickGenerate:(id)sender {
     
     [self printText:@"Requesting server to send push..."];
     
     [[Gamedonia script] run:@"sendpush" parameters:[[NSDictionary alloc] init] callback:^(BOOL script_success, NSDictionary *data) {
-            if  (script_success) {
-                
-                [self printText:@"Push requested successfully"];
-                
-            } else {
-                
-                [self printText:@"Failed request for server push."];
-                
-            }
+        if  (script_success) {
+            
+            [self printText:@"Push requested successfully"];
+            
+#if (TARGET_IPHONE_SIMULATOR)
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Push notifications won't work on the simulator. Use a device.\nCheck the README.txt for more info." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+#endif
+            
+        } else {
+            
+            [self printText:@"Failed request for server push."];
+            
+        }
     }];
-
+    
 }
 
 -(NSString*) concatenate:(NSString*)string1 with:(NSString*)string2 {
@@ -159,7 +165,7 @@
     
     NSRange range = NSMakeRange(_textView.text.length - 1, 1);
     [_textView scrollRangeToVisible:range];
-
+    
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

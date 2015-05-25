@@ -18,6 +18,7 @@
 		93AEE0441AC4240F0090F562 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE03D1AC4240F0090F562 /* background@2x.png */; };
 		93AEE0471AC4240F0090F562 /* button_green_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE0401AC4240F0090F562 /* button_green_normal.png */; };
 		93AEE0481AC4240F0090F562 /* button_green_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEE0411AC4240F0090F562 /* button_green_pressed.png */; };
+		93D351061B135A3F002F2D86 /* GamedoniaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D351051B135A3F002F2D86 /* GamedoniaSDK.framework */; };
 		93E3F5A81AA9BCA900901ADE /* PushTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E3F5A71AA9BCA900901ADE /* PushTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		93AEE03D1AC4240F0090F562 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		93AEE0401AC4240F0090F562 /* button_green_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_green_normal.png; sourceTree = "<group>"; };
 		93AEE0411AC4240F0090F562 /* button_green_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_green_pressed.png; sourceTree = "<group>"; };
+		93D351051B135A3F002F2D86 /* GamedoniaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GamedoniaSDK.framework; sourceTree = "<group>"; };
 		93E3F5A61AA9BCA900901ADE /* PushTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTableViewController.h; sourceTree = "<group>"; };
 		93E3F5A71AA9BCA900901ADE /* PushTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9341AEC81A9CDEC900B4AC3D /* StoreKit.framework in Frameworks */,
+				93D351061B135A3F002F2D86 /* GamedoniaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,7 @@
 		9341AEC91A9CDECF00B4AC3D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93D351051B135A3F002F2D86 /* GamedoniaSDK.framework */,
 				9341AEC71A9CDEC900B4AC3D /* StoreKit.framework */,
 			);
 			name = Frameworks;

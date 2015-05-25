@@ -24,10 +24,20 @@
     
     GDOptions *options = [[GDOptions alloc] init];
     options.push = true;
-    [Gamedonia initializeWithOptions:@"" secret:@"" apiServerUrl:@"http://api.gamedonia.com" apiVersion:@"v1" options:options];
+    
+    NSString *apiKey = @"";
+    NSString *secret = @"";
+    
+    if ( [apiKey isEqual: @""] || [secret isEqual: @""] ) {
+        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Configuration error" message:@"Api key/Secret are empty. Check the README.txt for more info." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    [Gamedonia initializeWithOptions:apiKey secret:secret apiServerUrl:@"http://api.gamedonia.com" apiVersion:@"v1" options:options];
     
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
-
+    
     return YES;
 }
 
